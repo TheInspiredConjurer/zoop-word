@@ -1,5 +1,9 @@
 const key = "API_KEY";
 
+// let reqWordList = await fetch('https://raw.githubusercontent.com/words/an-array-of-english-words/master/index.json');
+// let wordList = await reqWordList.json();
+// console.log(wordList[Math.floor(Math.random() * wordList.length)]);
+
 async function query() {
   const input = document.querySelector("#input").value;
 
@@ -9,7 +13,7 @@ async function query() {
   let res = await req.json();
 
   let el = "";
-  if (res.length !== 0) {
+  if (typeof res[0] === 'object' && res.length !== 0) {
     let defs = res[0].shortdef;
 
     for (let i = 0; i < defs.length; i++) {

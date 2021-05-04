@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zoop Word - A way to increase vocabulary</title>
+
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- STYLESHEET -->
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- SCRIPT -->
+    <script src="main.js" defer></script>
+  </head>
+
+  <style>
+    * {
+      font-family: "New Tegomin", serif;
+    }
+  </style>
+  <body>
+    <main>
+      <div class="m-12">
+        <div class="mb-6">
+          <input type="text" id="input" class="p-2 border rounded" />
+          <button
+            onclick="query()"
+            class="py-2 px-3 bg-blue-400 text-white font-bold rounded"
+          >
+            Request
+          </button>
+        </div>
+
+        <div>
+          <ul class="definitions list-disc list-inside"></ul>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

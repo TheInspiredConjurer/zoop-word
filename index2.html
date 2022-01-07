@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoop Word - A way to increase vocabulary</title>
+  <link rel="icon" type="image/x-icon" href="zoop.ico">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="main.js" defer></script>
+
+  <style>
+    textarea {
+    width: 100%;
+    resize: none;
+    text-align: center;
+  }
+
+  img {
+    object-fit: cover;
+  }
+
+  .box-border {
+    background:rgb(235, 235, 235);
+    position: relative;
+    z-index: 3;
+  }
+  </style>
+
+</head>
+
+<body class="box-border">
+    <div class="container px-6 max-h-min m-auto">
+      <div class="grid grid-cols-3 col-end-auto mt-8 mb-6 justify-center content-center justify-items-center">
+        <img src="zooppng.webp" alt="Zoop Image">
+        <p class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl pt-8 lg:pt-4 font-sans font-bold uppercase text-black">
+          Zoop Word
+        </p>
+        <img src="zooppng.webp" alt="Zoop Image">
+      </div>
+
+      <p class="mt-6 text text-lg text-center ">
+        Search or generate a random word with definition using the Merriam-Webster Dictionary API
+      </p>
+
+      <div>
+        <ul class="definitions list-disc list-outside"></ul>
+      </div>
+
+      <div class="grid grid-rows-5 grid-cols-1 md:grid-rows-2 md:grid-cols-2 align-middle gap-8 mt-8">
+        <div class="p-8 space-y-3 border-2 border-blue-400">
+          <h1 class="text-2xl font-bold text-center text-gray-700 uppercase">Find a Word Definition</h1>
+          <input type="text" id="input" class="w-full p-2 text-2xl text-center border rounded" />
+
+          <button
+            class="w-full py-2 text-lg text-blue-700 font-semibold border rounded-2xl border-purple-200 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2"
+            onclick="search()">Request
+          </button>
+
+
+          <div class="mt-5">
+            <ul class="definitions list-disc list-outside"></ul>
+          </div>
+        </div>
+
+
+        <div class="p-8 col-auto space-y-3 border-2 border-blue-400">
+          <h1 class="text-2xl font-bold text-center text-gray-700 uppercase">Learn a new word</h1>
+
+
+
+          <div class="text-black mt-5 mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ab nulla quod dignissimos vel non
+            corrupti doloribus voluptatum eveniet
+          </div>
+
+          <button
+          class="w-full py-2 text-lg text-blue-700 font-semibold border rounded-2xl border-purple-200 hover:text-white hover:bg-red-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2"
+          onclick="zoop()">Zoop
+        </button>
+      </div>
+</body>
+
+</html>

@@ -1,3 +1,12 @@
+<!--
+  TODO:
+  1. Improve UI
+    a. add border to inputs
+    b. redesign box
+    c. fix responsiveness
+    d. refactor code
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,6 +23,7 @@
     />
 
     <!-- STYLESHEET -->
+    <!-- *Update to latest version and implement better ways -->
     <link
       href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
       rel="stylesheet"
@@ -28,11 +38,13 @@
       font-family: "New Tegomin", serif;
     }
   </style>
+
   <body class="bg-gray-50">
     <main class="py-12">
       <section class="mb-6">
         <div class="mx-auto w-1/2 text-center">
           <h1 class="mb-6 text-6xl">Zoop Word</h1>
+          <!-- *Use proper description -->
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, a
             illum. Voluptatibus, sint et doloremque blanditiis recusandae
@@ -41,6 +53,8 @@
           </p>
         </div>
       </section>
+
+      <!-- !REDESIGN THIS SECTION -->
       <section class="m-12 flex gap-8 h-screen bg-white shadow rounded p-6">
         <!-- USER DEFINED WORD -->
         <div class="flex-1">
@@ -48,7 +62,11 @@
             Find a word definition.
           </h2>
           <div class="flex mb-6 gap-1">
-            <input type="text" id="input" class="w-full p-2 text-2xl font-bold border rounded" />
+            <input
+              type="text"
+              id="input"
+              class="w-full p-2 text-2xl font-bold border rounded"
+            />
             <button
               onclick="search()"
               class="py-2 px-3 bg-blue-400 text-white font-bold rounded"
@@ -57,6 +75,7 @@
             </button>
           </div>
 
+          <!-- *Use create element instead of class selector -->
           <div>
             <ul class="definitions list-disc list-inside"></ul>
           </div>
